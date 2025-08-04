@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactos</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="h-screen w-screen bg-gray-800 flex items-start pt-5 justify-center">
+      <header class="m-6 bg-white w-screen max-w-[600px] rounded-2xl overflow-auto">
+        <h1 class="bg-blue-600 p-6 text-white font-bold text-2xl text-center">Contactos</h1>
+        <section class="">
+          <div class="grid grid-cols-2">
+            <button id="btnAgregar" class="p-4 border-b-3 border-blue-600">
+              Agregar Contactos
+            </button>
+            <button id="btnVer" class="p-4 border-b-1 border-gray-400">
+              Ver Contactos
+            </button>
+          </div>
+          <div id="agregarContactos" class="block p-8">
+            <form id="formAgregar" action="" class="flex flex-col gap-4">
+              <div class="flex flex-col gap-2">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Nombre" class="p-3 border-1 border-gray-400 rounded-lg">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="apellido">Apellido</label>
+                <input id="apellido" type="text" placeholder="Apellido" class="p-3 border-1 border-gray-400 rounded-lg">
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="telefono">Telefono</label>
+                <input id="telefono" type="number" placeholder="ej: 04249999999" class="p-3 border-1 border-gray-400 rounded-lg">
+              </div>
+              <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg">Guardar contacto</button>
+            </form>
+          </div>
+          <div id="verContactos" class="p-6 hidden">
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-2 items-center px-2 border-1 rounded-lg border-blue-300">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cac5c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                </div>
+                <input id="buscar" type="text" placeholder="Buscar contacto..." class="p-2 w-full focus:outline-0">
+              </div>
+              <div id="contactos" class="flex flex-col gap-4 max-h-[400px] overflow-y-auto pb-3 pr-2"></div>
+            </div>
+            <div id="sinContactos" class="flex-col gap-2 items-center hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 24 24" fill="none" stroke="#cac5c5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list-icon lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+              <div class="flex flex-col items-center">
+                <p class="text-gray-400 font-semibold">No hay contactos disponibles</p>
+                <p class="text-gray-300">Agrege un contacto</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
