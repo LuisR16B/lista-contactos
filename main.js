@@ -96,7 +96,7 @@ function cargarContactos(contactos) {
     const eliminar = document.createElement('button');
     eliminar.className = 'bg-red-400 text-white p-2 rounded-lg hover:bg-red-500';
     eliminar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-icon lucide-trash"><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>';
-
+    //evento para eliminar un contacto
     eliminar.addEventListener('click', () => {
       const indexContacto = contactos.findIndex(contactoEliminar => contactoEliminar.nombre === contacto.nombre && contactoEliminar.apellido === contacto.apellido && contactoEliminar.telefono === contacto.telefono);
       contactos.splice(indexContacto, 1);
